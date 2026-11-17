@@ -1,0 +1,7 @@
+{
+ "events":[
+  {"id":1,"title":"Community Repair Café","category":"Community","date":"2026-12-05","venue":"Northside Makers Hall","capacity":40,"status":"Open"},
+  {"id":2,"title":"Urban Gardening Workshop","category":"Workshop","date":"2026-12-12","venue":"Green Corner Hub","capacity":25,"status":"Open"},
+  {"id":3,"title":"Indie Board Game Evening","category":"Social","date":"2026-12-19","venue":"Riverside Community Room","capacity":30,"status":"Planning"}
+ ]
+}

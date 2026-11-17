@@ -1,0 +1,15 @@
+<div class="container py-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+      <p class="text-success text-uppercase small fw-bold mb-1">Event coordination</p>
+      <h1 class="h2 mb-0">Organizer dashboard</h1>
+    </div>
+    <app-button label="Logout" btnClass="btn-outline-dark" (buttonClick)="logout()">
+    </app-button>
+  </div>
+  <div class="alert alert-info">You can view the community schedule. Event creation and editing are reserved for Admin.</div>
+  @if(errorMessage){<div class="alert alert-danger">{{errorMessage}}</div>}
+  <input class="form-control mb-3" type="search" placeholder="Search events..." [value]="searchText" (input)="searchText=$any($event.target).value">
+  <app-table title="Upcoming community events" [headers]="['ID','Title','Category','Date','Venue','Capacity','Status']" [columns]="['id','title','category','date','venue','capacity','status']" [rows]="filteredEvents">
+  </app-table>
+</div>

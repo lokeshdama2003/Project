@@ -1,0 +1,35 @@
+<div class="container py-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+      <p class="text-success text-uppercase small fw-bold mb-1">Discover something nearby</p>
+      <h1 class="h2 mb-0">Attendee dashboard</h1>
+    </div>
+    <app-button label="Logout" btnClass="btn-outline-dark" (buttonClick)="logout()">
+    </app-button>
+  </div>
+  <div class="portal-hero p-4 mb-4">
+    <h2 class="h3 fw-bold">Find your next community experience.</h2>
+    <p class="mb-0">Browse events currently open to attendees.</p>
+  </div>
+  @if(errorMessage){<div class="alert alert-danger">{{errorMessage}}</div>}
+  <input class="form-control mb-3" type="search" placeholder="Search open events..." [value]="searchText" (input)="searchText=$any($event.target).value">
+  <div class="row g-3">
+    @for(event of visibleEvents;track event.id){
+    <div class="col-md-6 col-lg-4">
+      <div class="card portal-card h-100">
+        <div class="card-body">
+          <span class="badge text-bg-success mb-2">{{event.category}}</span>
+          <h2 class="h5">{{event.title}}</h2>
+          <p class="text-secondary mb-1">{{event.date}}</p>
+          <p class="mb-1">
+            <strong>Venue:</strong> {{event.venue}}</p>
+              <p class="mb-0">
+                <strong>Capacity:</strong> {{event.capacity}}</p>
+                </div>
+              </div>
+            </div>
+            } @empty {<div class="col-12">
+              <div class="alert alert-light border text-center">No open events match your search.</div>
+            </div>}
+          </div>
+        </div>

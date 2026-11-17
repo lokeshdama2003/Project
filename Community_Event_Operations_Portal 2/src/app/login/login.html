@@ -1,0 +1,41 @@
+<div class="container py-5">
+  <div class="portal-hero p-4 p-md-5 mb-4">
+    <p class="text-uppercase small fw-bold mb-2 opacity-75">Neighbourhoods make things happen</p>
+    <h1 class="display-5 fw-bold">Gather &amp; Grow</h1>
+    <p class="lead mb-0">Community Event Operations Portal</p>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-8">
+      <div class="card portal-card">
+        <div class="card-body p-4 p-md-5">
+          <h2 class="h4 mb-2">Choose a demo role</h2>
+          <p class="text-secondary">This role selector demonstrates dashboard permissions. It is not production authentication.</p>
+          <div class="row g-3 mt-2">
+            <div class="col-md-4">
+              <button class="btn btn-success w-100 py-3" (click)="chooseRole('Admin')">
+                <strong>Admin</strong>
+                <br>
+                <small>Manage events</small>
+              </button>
+            </div>
+            <div class="col-md-4">
+              <button class="btn btn-outline-success w-100 py-3" (click)="chooseRole('Organizer')">
+                <strong>Organizer</strong>
+                <br>
+                <small>View schedule</small>
+              </button>
+            </div>
+            <div class="col-md-4">
+              <button class="btn btn-outline-dark w-100 py-3" (click)="chooseRole('Attendee')">
+                <strong>Attendee</strong>
+                <br>
+                <small>Explore events</small>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="muted-small text-center mt-3">Angular 20 · Bootstrap · JSON Server</p>
+    </div>
+  </div>
+</div>
